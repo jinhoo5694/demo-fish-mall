@@ -84,11 +84,9 @@ export default function ProductCard({ product, index = 0 }: ProductCardProps) {
           )}
         </div>
 
-        {product.quantity && (
-          <p className="mt-2 text-sm text-[var(--muted-foreground)] truncate">
-            {product.quantity}
-          </p>
-        )}
+        <p className="mt-2 text-sm text-[var(--muted-foreground)] truncate">
+          {product.quantity || '\u00A0'}
+        </p>
       </div>
     </a>
   );
